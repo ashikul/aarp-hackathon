@@ -8,9 +8,10 @@
             <td>Info</td>
             <td>Balance</td>
             <td>Date</td>
+            <td>Fraud?</td>
 
         </tr>
-        <tr ng-repeat="transaction in transactions">
+        <tr ng-repeat="transaction in transactions" ng-class="{'has-error': transaction.fraud}">
             <td>
                 {{transaction.amount | currency}}
             </td>
@@ -20,12 +21,30 @@
             </td>
             <td> {{transaction.posted_date}}
             </td>
+            <td>
+                <input type="checkbox" ng-model="transaction.fraud">
+            </td>
         </tr>
     </table>
 </div>
 <!--{{transactions}}-->
 
+<img src="../../../img/piechart.png" alt="">
+
+
+
 <style>
+
+    .has-error{
+        background-color: palevioletred;
+
+
+    }
+
+    .has-error:hover{
+        background-color: palevioletred;
+    }
+
     .transactions{
         padding: 10px;
     }
