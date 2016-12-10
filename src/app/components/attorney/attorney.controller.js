@@ -1,4 +1,4 @@
-function AttorneyController($state) {
+function AttorneyController($state, $scope) {
   var ctrl = this;
   // ctrl.$onInit = function () {
   //   ctrl.error = null;
@@ -16,6 +16,11 @@ function AttorneyController($state) {
   //       ctrl.error = reason.message;
   //     });
   // };
+
+    $scope.goTo = function() {
+        $state.go('transactions');
+    }
+
 }
 
 angular

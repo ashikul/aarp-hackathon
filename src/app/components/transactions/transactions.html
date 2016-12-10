@@ -1,28 +1,59 @@
+<div class="transactions">
+    <h2>Transactions</h2>
 
+    <!--{{ctrl.transactions}}-->
+    <table>
+        <tr style="background-color: #A4B4C4">
+            <td>Amount</td>
+            <td>Info</td>
+            <td>Balance</td>
+            <td>Date</td>
 
-<h2>Transactions</h2>
-
-
-{{ctrl.transactions}}
-<div ng-repeat="transaction in ctrl.transactions track by $index">
-    {{transaction.amount}}
-    {{transaction.description}}
-    {{transaction.posted_balance}}
-    {{transaction.posted_date}}
-
+        </tr>
+        <tr ng-repeat="transaction in transactions">
+            <td>
+                {{transaction.amount | currency}}
+            </td>
+            <td> {{transaction.description}}
+            </td>
+            <td> {{transaction.posted_balance | currency}}
+            </td>
+            <td> {{transaction.posted_date}}
+            </td>
+        </tr>
+    </table>
 </div>
-{{transactions}}
+<!--{{transactions}}-->
 
+<style>
+    .transactions{
+        padding: 10px;
+    }
 
-amount
-:
--1
-description
-:
-"Fee on account 0000001012"
-posted_balance
-:
-1000335
-posted_date
-:
-"2016-12-09"
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+        background-color: #f5f5f5
+    }
+</style>
+<!--amount-->
+<!--:-->
+<!-- -1-->
+<!--description-->
+<!--:-->
+<!--"Fee on account 0000001012"-->
+<!--posted_balance-->
+<!--:-->
+<!--1000335-->
+<!--posted_date-->
+<!--:-->
+<!--"2016-12-09"-->
