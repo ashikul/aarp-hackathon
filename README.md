@@ -1,4 +1,5 @@
 aarp hackathon
+-transactions management for elders
 
 setup:
 npm i
@@ -8,3 +9,5 @@ npm run start
 
 deploy:
 npm run deploy
+
+Based off Todd Motto's contact manager app
