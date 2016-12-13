@@ -1,5 +1,5 @@
-aarp hackathon
--transactions management for elders
+#aarp hackathon
+transactions management for elders
 
 setup:
 npm i
@@ -7,7 +7,8 @@ npm i
 run:
 npm run start
 
-deploy:
+deploy(need firebase login):
 npm run deploy
 
-Based off Todd Motto's contact manager app
+Credit: Based off Todd Motto's contact manager app
+https://github.com/toddmotto/angular-1-5-components-app
